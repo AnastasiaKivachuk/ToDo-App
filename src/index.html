@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/Task.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/style.css" type="text/css" />
+
+    <title>ToDo App</title>
+
+</head>
+
+<body>
+    <div class="row">
+        <aside>
+            <div class="col-md-2">
+
+                <div class="flex-column  menuSide" id="menuSide" role="tablist" aria-orientation="vertical">
+                    <h2 class="titleMenu"><span class="iconToDo"></span> ToDo</h2>
+                    <a class="nav-link linkListItem" id="home" data-toggle="pill" href="#home" role="tab"
+                        aria-controls="home" aria-selected="true">
+                        <span class="sideActive">.</span><i class="fa fa-home"></i>Home
+                    </a>
+                    <a class="nav-link linkListItem" id="settings" data-toggle="pill" href="#settings" role="tab"
+                        aria-controls="settings" aria-selected="false">
+                        <span class="sideActive">.</span><i class="fa fa-cog"></i>Settings
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <div class="col-md-10 offset-2 todoSide">
+                <header>
+                    <div class="row header">
+                        <p class="colorTheme">Filter of date</p>
+                        <a class="btn  btn-lg fa fa-sort-asc" id="asc" href="#">asc</a>
+                        <a class="btn  btn-lg fa fa-sort-desc" id="desc" href="#">desc</a>
+                        <p class="colorTheme">Choose color theme</p>
+                        <a class="darkred" id="darkred"></a>
+                        <a class="brown" id="brown"></a>
+                        <a class="blue" id="blue"></a>
+                        <a class="addToDo btn btn-primary btn-lg" href="#openModal"> +Add ToDo </a>
+
+                    </div>
+                </header>
+                <article>
+                    <H2>To Do (<span id="todoCount"></span>)</H2>
+                    <ul id="incompleteTasks">
+                        <li class="task">
+                            <label></label>
+                            <input type="checkbox" class="checkboxStyle">
+                            <span class="wrapText">
+                                <div class="time fa fa-clock-o"></div>
+                                <h6>Nam liber tempor1</h6>
+                                <p>Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                    nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores
+                                    legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis
+                                    videntur parum clari, fiant sollemnes in futurum.
+                                </p>
+                            </span>
+                            <div>
+                                <button class="edit">Edit</button>
+                                <button class="delete">Delete</button>
+                            </div>
+                            <div class="wrapperColor">
+                                <a class="red"></a>
+                                <a class="yellow"></a>
+                                <a class="green"></a>
+                                <a class="white"></a>
+                            </div>
+                        </li>
+                        <li class="task">
+                            <input type="checkbox" class="checkboxStyle">
+                            <span class="wrapText">
+                                <div class="time fa fa-clock-o"></div>
+                                <h6>Nam liber tempor2</h6>
+                                <p>Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                    nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores
+                                    legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis
+                                    videntur parum clari, fiant sollemnes in futurum.
+                                </p>
+                            </span>
+                            <div>
+                                <button class="edit">Edit</button>
+                                <button class="delete">Delete</button>
+                            </div>
+                            <div class="wrapperColor">
+                                <a class="red"></a>
+                                <a class="yellow"></a>
+                                <a class="green"></a>
+                                <a class="white"></a>
+                            </div>
+                        </li>
+                    </ul>
+                
+                </article>
+                <article>
+                    <H2>Completed (<span id="untodoCount"></span>)</H2>
+                    
+                
+                    <ul id="completedTasks">
+                        <li class="task">
+                            <input type="checkbox" class="checkboxStyle" checked>
+                            <span class="wrapText">
+                                <div class="time fa fa-check-circle-o"></div>
+                                <h6>Nam liber tempor3</h6>
+                                <p>Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                    nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores
+                                    legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis
+                                    videntur parum clari, fiant sollemnes in futurum.
+                                </p>
+                            </span>
+                            <div>
+                                <button class="edit">Edit</button>
+                                <button class="delete">Delete</button>
+                            </div>
+                            <div class="wrapperColor">
+                                <a class="red"></a>
+                                <a class="yellow"></a>
+                                <a class="green"></a>
+                                <a class="white"></a>
+                            </div>
+                        </li>
+                        <li class="task">
+                            <input type="checkbox" class="checkboxStyle" checked>
+                            <span class="wrapText">
+                                <div class="time fa fa-check-circle-o"></div>
+                                <h6>Nam liber tempor4</h6>
+                                <p>Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+                                    nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores
+                                    legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis
+                                    videntur parum clari, fiant sollemnes in futurum.
+                                </p>
+                            </span>
+                            <div>
+                                <button class="edit">Edit</button>
+                                <button class="delete">Delete</button>
+                            </div>
+                            <div class="wrapperColor">
+                                <a class="red"></a>
+                                <a class="yellow"></a>
+                                <a class="green"></a>
+                                <a class="white"></a>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+
+
+                <div id="openModal" class="modalDialog">
+                    <div>
+                        <a href="#close" title="close" class="close">X</a>
+                        <form>
+                            <div class="formGroup">
+                                <label for="nameTask">Name of task</label>
+                                <input type="text" class="form-control" id="nameTask" placeholder="Enter name" required>
+                            </div>
+                            <div class="formGroup">
+                                <label for="detalesTask">Detales</label>
+                                <textarea type="text" class="form-control" id="detalesTask" placeholder="Detales"
+                                    rows="4" required></textarea>
+                            </div>
+                            <a class="btn btn-primary" href="#close" id="addBtn">Add task</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </main>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
