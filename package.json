@@ -18,7 +18,7 @@
   "homepage": "https://github.com/AnastasiaKivachuk/ToDo-App#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-image": "^5.1.0",
     "gulp-sass": "^4.0.2",
